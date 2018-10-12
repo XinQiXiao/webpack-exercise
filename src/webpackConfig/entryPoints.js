@@ -9,24 +9,38 @@ const path = require('path')
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+/**
+ * 单个入口
+ */
 const config = {
 	entry: './path/to/my/entry/file.js',
-	output: {
-		path: path.resolve(__dirname, 'dist'),
-		filename: 'my-first-webpack.bundle.js'
+}
+// 简写
+const config1 = {
+	entry: {
+		main: './path/to/my/entry/file.js'
 	},
-	module: {
-		rules: [
-			{
-				test: /\.txt$/,
-				use: 'raw-loader',
-			}
-		]
-	},
-	plugins: [
-		new HtmlWebpackPlugin({template: './src/index.html'})
-	],
-	mode: 'development' // production development
+}
+
+/**
+ * 对象语法
+ */
+const configObj = {
+	entry: {
+		app: './src/app.js',
+		vendors: './src/vendors.js'
+	}
+}
+
+/**
+ * 多页面应用程序
+ */
+const configMulti = {
+	entry: {
+		pageOne: './src/pageOne/index.js',
+		pageTwo: './src/pageTwo/index.js',
+		pageThreee: './src/pageThree/index.js',
+	}
 }
 
 module.exports = config;
