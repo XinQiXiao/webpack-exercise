@@ -21,10 +21,14 @@
 
 			node_modules: css-loader / ts-loader / style-loader
 
-		t0.0.4 插件 && 配置
+		t0.0.4 插件 && 配置 && 模块 && 解析模块
 			src/webpackConfig/plugins
 			src/webpackConfig/configuration
+			src/webpackConfig/modules
+			src/webpackConfig/modulesResolution
 
-			模块 && 解析模块
-			src/webpackConfig/modules
-			src/webpackConfig/modules
+		t0.0.5 依赖图 && mainfest && 构建目标 && 模块热替换
+			src/webpackConfig/dependencyGraph
+			src/webpackConfig/mainfest
+			src/webpackConfig/targets
+			src/webpackConfig/hotModuleReplacement
